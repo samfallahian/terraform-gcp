@@ -1,7 +1,7 @@
 module "app_network" {
   source  = "terraform-google-modules/network/google"
   version = "10.0.0"
-  network_name = "${var.network_name}-network
+  network_name = "${var.network_name}-network"
   project_id = var.project_id
 
   subnets = [
@@ -14,7 +14,7 @@ module "app_network" {
 
   ingress_rules = [{
     name                    = "${var.network_name}-web"
-    description             = "inbound web
+    description             = "inbound web"
     source_ranges           = ["0.0.0.0/0"]
     target_tags             = ["${var.network_name}-web"]
 
@@ -34,7 +34,6 @@ data "google_compute_image" "ubuntu" {
 resource "google_compute_instance" "web" {
   name         = var.app_name
   machine_type = var.machine_type
-
   tags = ["${var.network_name}-web"]
 
   boot_disk {
