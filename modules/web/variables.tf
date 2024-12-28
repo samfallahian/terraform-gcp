@@ -1,6 +1,5 @@
 variable "project_id" {
     type= string
-    default = "terraform-446100"
 }
 
 variable "region" {
@@ -15,7 +14,6 @@ variable "zone" {
 
 variable "network_name" {
     type= string
-    default = "app"
 }
 
 variable "network_ip_range" {
@@ -35,7 +33,6 @@ variable "image_family" {
 
 variable "app_name" {
     type= string
-    default = "web"
 }
 
 variable "machine_type" {
