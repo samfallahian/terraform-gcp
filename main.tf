@@ -1,6 +1,6 @@
 module "qa" {
     source = "./modules/web"
 
-    app_name = "qa_web"
+    app_name = "qa-web"
     network_name = "web"
 }
